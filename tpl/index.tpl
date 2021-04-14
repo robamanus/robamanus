@@ -26,10 +26,13 @@
 								<td>Экс-5</td>
 							</tr>';
 		foreach($_SESSION as $k=>$v){
-			$matches[$k] = 0;
-			$lvl[$k] = 0;
+			$matches[$k] = $lvl[$k] = 0;
+			$guesseddigits[$k] = array();
 			for($m=0;$m<count($v);$m++){
-				if($v[$m][1]==true) $matches[$k]++;
+				if($v[$m][1]==true) {
+					$matches[$k]++;
+					$guesseddigits[$k][] = $v[$m][3];
+				}
 				$lvl[$k] = $v[$m][2];
 			}
 		}
@@ -44,6 +47,14 @@
 					<td>Совпадений</td>';
 			foreach($matches as $val){
 				echo '<td>' . $val . '</td>';
+			}
+			echo '</tr><tr>
+					<td>Угадал числа</td>';
+			foreach($guesseddigits as $k){
+				echo '<td>';
+				$k = implode(', ',$k);
+				echo $k;
+				echo '</td>';
 			}
 			echo '</tr><tr>
 					<td>Уровень достоверности</td>';
