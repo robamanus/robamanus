@@ -26,34 +26,34 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$c++;
 		}
 	}
-	echo "<div style='font-family:Tahoma;font-size:50px;'>
+	echo "<div style='font-family:Tahoma;font-size:18px;'>
 			<div>Догадки экстрассенсов:</div>
-			<div style='display:flex;justify-content:center;flex-wrap:wrap;width:1258px;'>
-				<div style='margin:30px;'>
+			<div style='display:flex;justify-content:center;flex-wrap:wrap;width:500px;'>
+				<div style='margin:10px;'>
 					<div>Экс-1</div>
 					<div style='font-weight:bold;' id='p1'>".$psychic_1_digit."</div>
 				</div>
-				<div style='inline-block;margin:30px;'>
+				<div style='inline-block;margin:10px;'>
 					<div>Экс-2</div>
 					<div style='font-weight:bold;' id='p2'>".$psychic_2_digit."</div>
 				</div>
-				<div style='inline-block;margin:30px;'>
+				<div style='inline-block;margin:10px;'>
 					<div>Экс-3</div>
 					<div style='font-weight:bold;' id='p3'>".$psychic_3_digit."</div>
 				</div>
-				<div style='inline-block;margin:30px;'>
+				<div style='inline-block;margin:10px;'>
 					<div>Экс-4</div>
 					<div style='font-weight:bold;' id='p4'>".$psychic_4_digit."</div>
 				</div>
-				<div style='inline-block;margin:30px;'>
+				<div style='inline-block;margin:10px;'>
 					<div>Экс-5</div>
 					<div style='font-weight:bold;' id='p5'>".$psychic_5_digit."</div>
 				</div>
 			</div>
 			<div>
-				<input type='text' name='user_digit' placeholder='Ваше задуманное число' style='outline:none;width:500px;height:75px;border:1px solid #888;font-size:42px;text-align:center;'>
+				<input type='text' name='user_digit' placeholder='Ваше задуманное число' style='outline:none;width:200px;height:40px;border:1px solid #888;font-size:16px;text-align:center;'>
 			</div>
-			<div style='position:absolute;bottom:75px;left:42%;'>
+			<div style='position:absolute;bottom:25px;left:31%;'>
 				<button style='width:200px;height:50px;font-family:Tahoma;font-size:18px;' id='user_digit'>ОК</button>
 			</div>
 		</div>";
