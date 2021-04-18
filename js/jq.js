@@ -35,8 +35,9 @@ function ModalWindowNoClose(data) {
 function OK() {
 	$.ajax({
 		type: "POST",
-		url: "http://ck35313.tmweb.ru/handlers/ok.php",
+		url: "http://ck35313.tmweb.ru/controllers/Message",
 		dataType: "html",
+		data: {step:2},
 		cache: false,
 		success: function(data){
 			ModalWindowNoClose(data);
@@ -47,9 +48,9 @@ function SendUserDigit() {
 	var user_digit = $("input[name='user_digit']").val();
 	$.ajax({
 		type: "POST",
-		url: "http://ck35313.tmweb.ru/handlers/senduserdigit.php",
+		url: "http://ck35313.tmweb.ru/controllers/Message",
 		dataType: "html",
-		data: {user_digit:user_digit},
+		data: {step:3,user_digit:user_digit},
 		cache: false,
 		success: function(data){
 			if(data!=false){
@@ -62,10 +63,12 @@ function SendUserDigit() {
 function Load() {
 	$.ajax({
 		type: "POST",
-		url: "http://ck35313.tmweb.ru/handlers/message.php",
+		url: "http://ck35313.tmweb.ru/controllers/Message",
 		dataType: "html",
+		data: {step:1},
 		cache: false,
 		success: function(data){
+			//alert(data);
 			ModalWindow(data);
 		}
 	});

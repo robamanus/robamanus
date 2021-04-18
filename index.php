@@ -8,6 +8,6 @@ ini_set("display_errors", 1);
 if (function_exists('date_default_timezone_set')) {
 	date_default_timezone_set('Asia/Yekaterinburg');
 }
-require_once $_SERVER['DOCUMENT_ROOT']."/lib/class_Template.php";
-new Template();
+require_once $_SERVER['DOCUMENT_ROOT']."/core/controllers/Router.php";
+new Router();
 ?>
