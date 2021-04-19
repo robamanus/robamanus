@@ -37,7 +37,6 @@ namespace MDL;
 							$c++;
 						}
 					}
-					return $this->ready_data;
 					break;
 				case 3:
 					if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -63,15 +62,10 @@ namespace MDL;
 							$_SESSION[$k][$last_key][3] = $_POST['user_digit']; // [3] - число пользователя
 						}
 					}
-					return $this->ready_data;
 					break;
 				default: return;
 			}
-		}
-		
-		function Executor(){ // Передаём данные в переработку
-			$mh = new MDL\Message;
-			$mh->MessageHandler($this->obtained_data);
+			return $this->ready_data;
 		}
 	}
 ?>
